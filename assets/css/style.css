@@ -668,24 +668,24 @@ section {
 /*--------------------------------------------------------------
 # Youtube
 --------------------------------------------------------------*/
-.youtube .container {
+.yt .container {
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   padding-bottom: 15px;
 }
 
-.youtube .play-btn {
+.yt .play-btn {
   width: 94px;
   height: 94px;
   background: radial-gradient(#ff4a17 50%, rgba(255, 74, 23, 0.4) 52%);
   border-radius: 50%;
   display: block;
   position: absolute;
-  left: calc(50% - 47px);
-  top: calc(50% - 47px);
+  left: auto;
+  top: auto;
   overflow: hidden;
 }
 
-.youtube .play-btn::after {
+.yt .play-btn::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -700,7 +700,7 @@ section {
   transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
-.youtube .play-btn::before {
+.yt .play-btn::before {
   content: "";
   position: absolute;
   width: 120px;
@@ -723,12 +723,12 @@ section {
   background: rgba(198, 16, 0, 0);
 }
 
-.youtube .play-btn:hover::after {
+.yt .play-btn:hover::after {
   border-left: 15px solid #ff4a17;
   transform: scale(20);
 }
 
-.youtube .play-btn:hover::before {
+.yt .play-btn:hover::before {
   content: "";
   position: absolute;
   left: 50%;
@@ -745,28 +745,45 @@ section {
   animation: none;
   border-radius: 0;
 }
+#yt .btn-watch-video {
+  font-size: 16px;
+  display: inline-block;
+  transition: 0.5s;
+  margin-left: 25px;
+  color: orange;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
 
-@-webkit-keyframes pulsate-btn {
-  0% {
-    transform: scale(0.6, 0.6);
-    opacity: 1;
-  }
+#yt .btn-watch-video i {
+  line-height: 0;
+  color: orange;
+  font-size: 32px;
+  transition: 0.3s;
+  margin-right: 8px;
+}
 
-  100% {
-    transform: scale(1, 1);
-    opacity: 0;
+#yt .btn-watch-video:hover i {
+  color: #ff4a17;
+}
+
+@media (min-width: 1024px) {
+  #hero {
+    background-attachment: fixed;
   }
 }
 
-@keyframes pulsate-btn {
-  0% {
-    transform: scale(0.6, 0.6);
-    opacity: 1;
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 28px;
+    line-height: 36px;
   }
 
-  100% {
-    transform: scale(1, 1);
-    opacity: 0;
+  #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
   }
 }
 
